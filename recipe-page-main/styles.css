@@ -1,0 +1,260 @@
+:root {
+    /*Primary*/
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark_raspberry: hsl(332, 51%, 32%);
+    /*Neutral*/
+    --white: hsl(0, 0%, 100%);
+    --rose_white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light_grey: hsl(30, 18%, 87%);
+    --wenge_brown: hsl(30, 10%, 34%);
+    --dark_charcoal: hsl(24, 5%, 18%);
+}
+
+@font-face {
+    font-family: "Young-Serif";
+    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/outfit/static/Outfit-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/outfit/static/Outfit-Bold.ttf");
+    font-style: normal;
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Young-Serif', sans-serif;
+
+}
+
+html{
+    font-size: 16px;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--eggshell);
+    padding-top: 123px;
+    padding-bottom: 120px;
+}
+
+.container{
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    background-color: var(--white);
+    padding: 40px;
+    max-width: 750px;
+    border-radius: 25px;
+    /*margin: 50px 0px;*/
+}
+
+img{
+    width: 100%;
+    border-radius: 15px
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.description h1{
+    color: var(--dark_charcoal);
+    font-size: 34px;
+}
+
+.description p{
+    color: var(--wenge_brown);
+    font-family: "Outfit", sans-serif;
+}
+
+.preparation{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    background-color: var(--rose_white);
+    border-radius: 15px;
+    padding: 15px 25px;
+}
+
+.preparation h3{
+    color: var(--dark_raspberry);
+    font-family: "Outfit", sans-serif;
+}
+
+.preparation span{
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    color: var(--wenge_brown)
+}
+
+.preparation li::marker{
+    color: var(--dark_raspberry);
+}
+
+.preparation ul {
+    margin-left: 25px;
+}
+
+.preparation ul li{
+    font-family: "Outfit", sans-serif;
+    margin: 10px 0px;
+    padding-left: 15px;
+    color: var(--wenge_brown);
+}
+
+.ingredients{
+    color: var(--nutmeg);
+}
+
+.ingredients h2{
+    color: inherit;
+    font-weight: 400;
+}
+
+.ingredients li::marker{
+    color: var(--nutmeg)
+}
+
+.ingredients ul {
+    margin-left: 25px;
+}
+
+.ingredients ul li{
+    font-family: "Outfit", sans-serif;
+    color:  var(--wenge_brown);
+    margin: 10px 0px;
+    padding-left: 8px;
+}
+
+.container hr {
+    border-top: 0.3px solid var(--light_grey);
+}
+
+.instructions{
+    color: var(--nutmeg);
+}
+
+.instructions h2{
+    color: inherit;
+    font-weight: 400;
+}
+
+.instructions li::marker{
+    color: var(--nutmeg)
+}
+
+.instructions span{
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    color: var(--wenge_brown);
+}
+
+.instructions ol li::marker{
+    font-weight: bold;
+}
+
+.instructions ol {
+    margin-left: 25px;
+}
+
+.instructions ol li{
+    font-family: "Outfit", sans-serif;
+    color: var(--wenge_brown);
+    margin: 10px 0px;
+    padding-left: 10px;
+}
+
+.nutrition{
+    color: var(--nutmeg);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nutrition h2{
+    color: inherit;
+    font-weight: 400;
+}
+
+.nutrition p{
+    color: var(--wenge_brown);
+    font-family: "Outfit", sans-serif;
+}
+
+.nutrition table tr td{
+    color: var(--wenge_brown);
+    font-family: "Outfit", sans-serif;
+}
+
+.nutrition table tr td span{
+    color: var(--nutmeg);
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    vertical-align: middle;
+}
+
+td{
+    border-bottom: 1px solid var(--light_grey);
+    padding: 10px;
+    padding-left: 35px;
+}
+
+.no-border{
+    border-bottom: none;
+}
+
+/*Responsive*/
+
+@media only screen and (max-width: 770px) {
+
+    section{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .image{
+        margin: -40px;
+        margin-bottom: 8px;
+    }
+    
+    img{
+        border-radius: 0%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+

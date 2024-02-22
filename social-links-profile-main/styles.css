@@ -1,0 +1,108 @@
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark_grey: hsl(0, 0%, 12%);
+    --off_black: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    src: url("/assets/fonts/static/Inter-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    src: url("/assets/fonts/static/Inter-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    src: url("/assets/fonts/static/Inter-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+section{
+    height: 100vh;
+    background-color: var(--off_black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 330px;
+    background-color: var(--dark_grey);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+img{
+    height: 125px;
+    width: 125px;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.card-title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1{
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3{
+    color: var(--green);
+    font-weight: 600;
+}
+
+p{
+    color: var(--white);
+}
+
+.card-social-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+a{
+    background-color: var(--grey);
+    padding: 15px 0px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--white);
+    border: none;
+    transition: ease-in-out .3s;
+}
+
+a:hover{
+    cursor: pointer;
+    background-color: var(--green);
+    color: var(--off_black);
+    
+}
+
