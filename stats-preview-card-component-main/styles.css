@@ -26,10 +26,10 @@ section{
 
 .container{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    width: 280px;
-
-    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    width: 60%;
+    margin: 10vh auto;
 }
 
 .container #left-side{
@@ -41,8 +41,7 @@ section{
     gap: 25px;
     padding: 25px;
     border-radius: 0px 0px 5px 5px;
-
-    grid-column: 1 / span 12;
+    grid-column: 1;
 }
 
 .container #left-side h1{
@@ -57,7 +56,7 @@ section{
 .container #left-side p{
     font-family: 'Inter',sans-serif;
     font-weight: 100;
-    line-height: 1.4rem;
+    line-height: 1.2rem;
     text-wrap: balance;
     font-size: 12px;
 }
@@ -82,7 +81,6 @@ section{
 }
 
 .container #right-side{
-    grid-column: 1 / span 12;
     grid-row: 1;
     background-color: var(--soft-violet);
     border-radius: 5px 5px 0px 0px;
@@ -97,20 +95,22 @@ section{
 @media (min-width: 1020px) {
     .container{
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-
-        width: 800px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px;
+        place-content: center;
     }
 
     .container #left-side{
         display: flex;
         flex-direction: column;
-        gap: 40px;
-        padding: 40px;
+        justify-content: center;
+        gap: 30px;
+        padding: 50px;
         border-radius: 5px 0px 0px 5px;
-
-        grid-column: 1 / span 6;
         text-align: left;
+
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .container #left-side h1{
@@ -135,7 +135,7 @@ section{
 
     .container #right-side{
         border-radius: 0px 5px 5px 0px;
-        grid-column: 7 / span 12;
+        grid-column: 2;
         grid-row: 1;
     }  
 }

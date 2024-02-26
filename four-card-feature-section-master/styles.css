@@ -1,0 +1,171 @@
+:root {
+    /* Primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+
+    /* Weights */
+    --extra-light: 200;
+    --regular: 400;
+    --semi-bold: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+    ;
+}
+
+p {
+    color: var(--grayish-blue);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    min-height: 100vh;
+    width: 80%;
+    margin: 10vh auto;
+    text-align: center;
+}
+
+.intro {
+    color: var(--very-dark-blue);
+}
+
+.intro h1 {
+    font-weight: var(--extra-light);
+    margin-bottom: 25px;
+}
+
+.intro p{
+    text-wrap: pretty;
+}
+
+.intro span {
+    font-weight: var(--semi-bold);
+}
+
+.hidden{
+    display: none;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: var(--very-dark-blue);
+    border-radius: 10px;
+    text-align: left;
+    border-top: 5px solid;
+    box-shadow: 0px 1px 20px 8px rgba(114, 116, 214, 0.1);
+
+    padding: 20px 30px;
+    gap: 30px;
+}
+
+article p {
+    font-size: 13px;
+    padding-right: 20px;
+}
+
+article h2 {
+    margin-bottom: 5px;
+}
+
+img {
+    align-self: flex-end;
+}
+
+.first {
+    border-color: var(--cyan);
+}
+
+.second {
+    border-color: var(--red);
+}
+
+.third {
+    border-color:  var(--orange);
+}
+
+.fourth {
+    border-color: var(--blue);
+}
+
+@media (min-width: 1020px) {
+    section{
+        align-items: center;
+        min-height: 80vh;
+        margin: 5vh auto;
+    }
+
+    .intro{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+    }
+
+    .intro h1{
+        font-size: 35px;
+        grid-column: 2;
+    }
+
+    .intro p{
+        text-wrap: nowrap;
+        grid-column: 2;
+    }
+    
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "first second fourth"
+        "first third fourth";
+
+        width: 80%;
+    }
+
+    .first {
+        grid-area: first;
+        align-self: center;
+    }
+
+    .second {
+        grid-area: second;
+    }
+
+    .third {
+        grid-area: third;
+    }
+
+    .fourth {
+        grid-area: fourth;
+        align-self: center;
+    }
+
+    .hidden{
+        display: inline;
+    }
+}
