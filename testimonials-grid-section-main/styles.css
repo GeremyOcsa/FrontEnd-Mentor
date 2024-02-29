@@ -6,6 +6,7 @@
     /* Neutral */
     --light-gray: hsl(0, 0%, 81%);
     --light-grayish-blue: hsl(210, 46%, 95%);
+    font-size: 13px;   
 }
 
 * {
@@ -14,10 +15,6 @@
     box-sizing: border-box;
     font-family: 'Barlow Semi Condensed', sans-serif;
     /*Weights 500 600*/
-}
-
-html {
-    font-size: 13px;
 }
 
 section {
@@ -103,26 +100,26 @@ section {
     font-size: 18px;
 }
 
-.container .description {
+.description {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 20px;
     align-items: center;
 }
 
-.container .description img {
+.description img {
     border-radius: 100%;
     width: 30px;
     height: 30px;
 }
 
-.container .description h2 {
+.description h2 {
     font-weight: 500;
     color: inherit;
     font-size: 12px;
 }
 
-.container .description span {
+.description span {
     color: inherit;
     opacity: 50%;
     font-size: 11px;
